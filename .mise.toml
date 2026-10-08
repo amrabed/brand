@@ -1,0 +1,17 @@
+[tools]
+node = "latest"
+pnpm = "latest"
+
+[tasks.install]
+description = "Install dependencies"
+run = "pnpm install"
+alias = "i"
+
+[tasks.typecheck]
+description = "Run typechecking"
+run = "pnpm run typecheck"
+
+[tasks.verify]
+description = "Run all verification tasks"
+depends = ["typecheck"]
+alias = "v"
